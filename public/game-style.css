@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    background-image: linear-gradient(to right, rgb(200, 200, 100), rgb(200, 100, 50));
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.game {
+    position: relative;
+    background-color: rgb(200, 100, 0);
+    width: 60vh;
+    height: 60vh;
+    border: 4px black solid;
+    box-shadow: 5px 5px 5px 5px #160f0f2c;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.board {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px rgb(100, 50, 0) solid; 
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 2px 2px #160f0f2c;
+    --x: 8;
+}
+
+
+.dark-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: calc(100% / var(--x));
+    width: calc(100% / var(--x));
+}
+
+
+.light-square {
+    background-color: rgba(176, 176, 176, 0.989);
+    height: calc(100% / var(--x));
+    width: calc(100% / var(--x));
+}
+
+.dark-square:hover,
+.light-square:hover {
+    border: 1px red solid;
+}
+
+.red-player::after {
+    content: '';
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.black-player::after {
+    content: '';
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.king::after {
+    z-index: 1;
+    content: "👑";
+    /* content: "Shtibel"; */
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.game-over::after {
+    content: "Tzioni is Gay";
+    font-size: 15rem;
+    justify-content: center;
+}
+
+.player-one {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, 25%);
+    font-weight: bold;
+}
+
+.player-two {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, -25%);
+    font-weight: bold;
+}
+
+.options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    bottom: 0; left: 0;
+}
+
+.logout {
+    background-color:rgb(243, 163, 57);
+    font-size:  xx-large;
+    font-weight: bold;
+    color: black;
+    border: 4px double black;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    
+}
+
+
+
+.lobby {
+    background-color:rgb(243, 163, 57);
+    font-size: xx-large;
+    font-weight: bold;
+
+    color: black;
+    border: 4px double black;
+    text-decoration: none;
+    padding: 0.5rem;
+    text-align: center;
+    
+}

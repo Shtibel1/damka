@@ -1,0 +1,59 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    direction: rtl;
+}
+
+body {
+    background-color:tan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 30vh);
+    line-height: 2rem;
+    /* width: 30%; */
+    
+}
+
+form > h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+form > div {
+    width: 100%;
+}
+
+form > div > label {
+    font-size: 2rem;
+
+}
+
+form > div > input {
+    width: 100%;
+    font-size: 1.3rem;
+    margin-bottom: 1.3rem;
+}
+
+form > button {
+    background-color: white;
+    font-size: 1.5rem;
+}
+
+p {
+    display: inline-block;
+}
+

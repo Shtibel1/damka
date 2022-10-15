@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lobby-style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="side-bar">
+        <h3>מתשמשים מחוברים</h3>
+        <ul class="connected-users">
+           
+        </ul>
+    </div>
+    
+    <header>
+        <h1>Hello <%- userName %> </h1>
+    </header>
+        
+        <form action="/damka">
+            <h3>בחר חדר</h3>
+
+            <input type="text" name="room" placeholder="שם החדר" required>
+            <button type="submit">היכנס</button>
+        </form>
+
+
+    <div class="invitation hidden">
+        <h3>מישהו הזמין אותך</h3>
+        <button class="accept"><a >אשר</a>></button>
+        <button class="decline"><a >סרב</a>></button>
+    </div>
+
+    <div class="options">
+        <a class="profile" href="/profile">פרופיל</a>
+        <a class="logout" href="/logout">התנתק</a>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="lobby.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+</body>
+</html>

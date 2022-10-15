@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>sig up</title>
+</head>
+<body>
+    <form method="POST">
+        <h1>הרשמה</h1>
+        <div class="name">
+            <label for="name" id="name">שם</label>
+            <input type="text" name="name" placeholder="שם">
+        </div>
+        <div class="email">
+            <label for="email" id="email">אימייל</label>
+            <input type="text" name="email" placeholder="אימייל">
+        </div>
+        <div class="">
+            <label for="password" id="password">סיסמא</label>
+            <input type="password" name="password" placeholder="סיסמא">
+        </div>
+        <button type="submit">הירשם</button>
+        <p>יש לך משתמש?</p><a href="/login">התחבר</a></p>
+    </form>
+    <%- include('./partials/errMessage') %> 
+    
+</body>
+</html>
+
+<!-- add photo to the page -->
